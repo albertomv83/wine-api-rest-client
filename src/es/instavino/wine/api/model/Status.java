@@ -18,4 +18,22 @@ public class Status {
     private Integer ReturnCode;
 
     private String[] Messages;
+
+	public Integer getReturnCode() {
+		return ReturnCode;
+	}
+
+	public void setReturnCode(Integer returnCode) {
+		ReturnCode = returnCode;
+	}
+
+	public String[] getMessages() {
+		return Messages;
+	}
+
+	public void setMessages(String[] messages) {
+		Messages = messages;
+	}
+    
+    
 }

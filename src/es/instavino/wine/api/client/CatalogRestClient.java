@@ -10,9 +10,17 @@
  */
 package es.instavino.wine.api.client;
 
+import com.sun.jersey.api.client.Client;
+
 /**
  *
  */
 public class CatalogRestClient {
+	
+	private final Client c;
+	
+	CatalogRestClient(){
+		c= Client.create();
+	}
 
 }

@@ -3,39 +3,46 @@
  */
 package es.instavino.wine.api.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
  */
 public class Region {
 	
-	private Long Id;
-	private String Name;
-	private String Url;
-	private Area Area;
+	@JsonProperty(value = "Id")
+	private Long id;
+	@JsonProperty(value = "Name")
+	private String name;
+	@JsonProperty(value = "Url")
+	private String ul;
+	@JsonProperty(value = "Area")
+	private Area area;
+	
 	public Long getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
-	public String getUrl() {
-		return Url;
+	public String getUl() {
+		return ul;
 	}
-	public void setUrl(String url) {
-		Url = url;
+	public void setUl(String ul) {
+		this.ul = ul;
 	}
 	public Area getArea() {
-		return Area;
+		return area;
 	}
 	public void setArea(Area area) {
-		Area = area;
+		this.area = area;
 	}
 	
 	

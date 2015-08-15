@@ -4,35 +4,42 @@
 package es.instavino.wine.api.model;
 import java.util.List;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
  */
 public class CommunityReviews {
 	
-	private Long HighestScore;
-	private List<CommunityReview> List;
-	private String Url;
+	@JsonProperty(value = "HighestScore")
+	private Long highestScore;
+	@JsonProperty(value = "List")
+	private List<CommunityReview> list;
+	@JsonProperty(value = "Url")
+	private String url;
+	
 	public Long getHighestScore() {
-		return HighestScore;
+		return highestScore;
 	}
 	public void setHighestScore(Long highestScore) {
-		HighestScore = highestScore;
+		this.highestScore = highestScore;
 	}
 	public List<CommunityReview> getList() {
-		return List;
+		return list;
 	}
 	public void setList(List<CommunityReview> list) {
-		List = list;
+		this.list = list;
 	}
 	public String getUrl() {
-		return Url;
+		return url;
 	}
 	public void setUrl(String url) {
-		Url = url;
+		this.url = url;
 	}
 	
 	
+		
 	
 
 }

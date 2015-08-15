@@ -10,30 +10,38 @@
  */
 package es.instavino.wine.api.model;
 
+import java.util.List;
+
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  *
  */
 public class Status {
 
-    private Integer ReturnCode;
+	@JsonProperty(value="ReturnCode")
+    private Integer returnCode;
 
-    private String[] Messages;
+	@JsonProperty(value="Messages")
+    private List<String> messages;
 
 	public Integer getReturnCode() {
-		return ReturnCode;
+		return returnCode;
 	}
 
 	public void setReturnCode(Integer returnCode) {
-		ReturnCode = returnCode;
+		this.returnCode = returnCode;
 	}
 
-	public String[] getMessages() {
-		return Messages;
+	public List<String> getMessages() {
+		return messages;
 	}
 
-	public void setMessages(String[] messages) {
-		Messages = messages;
+	public void setMessages(List<String> messages) {
+		this.messages = messages;
 	}
+	
+	
     
     
 }

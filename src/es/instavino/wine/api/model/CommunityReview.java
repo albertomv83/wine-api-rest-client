@@ -3,47 +3,56 @@
  */
 package es.instavino.wine.api.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
  */
 public class CommunityReview {
 	
-	private Long Id;
-	private String Name;
-	private Long Score;
-	private String Description;
-	private String Url;
+	@JsonProperty(value = "Id")
+	private Long id;
+	@JsonProperty(value = "Name")
+	private String name;
+	@JsonProperty(value = "Score")
+	private Long ccore;
+	@JsonProperty(value = "Description")
+	private String description;
+	@JsonProperty(value = "Url")
+	private String url;
+	
 	public Long getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
-	public Long getScore() {
-		return Score;
+	public Long getCcore() {
+		return ccore;
 	}
-	public void setScore(Long score) {
-		Score = score;
+	public void setCcore(Long ccore) {
+		this.ccore = ccore;
 	}
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 	public String getUrl() {
-		return Url;
+		return url;
 	}
 	public void setUrl(String url) {
-		Url = url;
+		this.url = url;
 	}
+	
 	
 	
 

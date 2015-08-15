@@ -2,142 +2,181 @@ package es.instavino.wine.api.model;
 
 import java.util.List;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 public class Product {
 
-	private Long Id;
-	private String Name;
-	private String Description;
-	private GeoLocation GeoLocation;
-	private String Url;
-	private Float PriceMin;
-	private Float PriceMax;
-	private Float PriceRetail;
-	private String Type;
-	private String Year;
-	private Apellation Apellation;
-	private Varietal Varietal;
-	private Vineyard Vineyard;
-	private List<ProductAttribute> ProductAttributes;
-	private List<Label> Labels;
-	private Ratings Ratings;
-	private Retail Retail;
-	private Vintages Vintages;
-	private Community Community;
+	@JsonProperty(value = "Id")
+	private Long id;
+	@JsonProperty(value = "Name")
+	private String name;
+	@JsonProperty(value = "Description")
+	private String description;
+	@JsonProperty(value = "GeoLocation")
+	private GeoLocation geoLocation;
+	@JsonProperty(value = "Url")
+	private String url;
+	@JsonProperty(value = "PriceMin")
+	private Float priceMin;
+	@JsonProperty(value = "PriceMax")
+	private Float priceMax;
+	@JsonProperty(value = "PriceRetail")
+	private Float priceRetail;
+	@JsonProperty(value = "Type")
+	private String type;
+	@JsonProperty(value = "Year")
+	private String year;
+	@JsonProperty(value = "Appellation")
+	private Appelation appellation;
+	@JsonProperty(value = "Varietal")
+	private Varietal varietal;
+	@JsonProperty(value = "Vineyard")
+	private Vineyard vineyard;
+	@JsonProperty(value = "ProductAttributes")
+	private List<ProductAttribute> productAttributes;
+	@JsonProperty(value = "Labels")
+	private List<Label> labels;
+	@JsonProperty(value = "Ratings")
+	private Ratings ratings;
+	@JsonProperty(value = "Retail")
+	private Retail retail;
+	@JsonProperty(value = "Vintage")
+	private String vintage;
+	@JsonProperty(value = "Vintages")
+	private Vintages vintages;
+	@JsonProperty(value = "Community")
+	private Community community;
+	
+	
 	public Long getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 	public GeoLocation getGeoLocation() {
-		return GeoLocation;
+		return geoLocation;
 	}
 	public void setGeoLocation(GeoLocation geoLocation) {
-		GeoLocation = geoLocation;
+		this.geoLocation = geoLocation;
 	}
 	public String getUrl() {
-		return Url;
+		return url;
 	}
 	public void setUrl(String url) {
-		Url = url;
+		this.url = url;
 	}
 	public Float getPriceMin() {
-		return PriceMin;
+		return priceMin;
 	}
 	public void setPriceMin(Float priceMin) {
-		PriceMin = priceMin;
+		this.priceMin = priceMin;
 	}
 	public Float getPriceMax() {
-		return PriceMax;
+		return priceMax;
 	}
 	public void setPriceMax(Float priceMax) {
-		PriceMax = priceMax;
+		this.priceMax = priceMax;
 	}
 	public Float getPriceRetail() {
-		return PriceRetail;
+		return priceRetail;
 	}
 	public void setPriceRetail(Float priceRetail) {
-		PriceRetail = priceRetail;
+		this.priceRetail = priceRetail;
 	}
 	public String getType() {
-		return Type;
+		return type;
 	}
 	public void setType(String type) {
-		Type = type;
+		this.type = type;
 	}
 	public String getYear() {
-		return Year;
+		return year;
 	}
 	public void setYear(String year) {
-		Year = year;
+		this.year = year;
 	}
-	public Apellation getApellation() {
-		return Apellation;
+	public Appelation getApellation() {
+		return appellation;
 	}
-	public void setApellation(Apellation apellation) {
-		Apellation = apellation;
+	public void setApellation(Appelation apellation) {
+		this.appellation = apellation;
 	}
 	public Varietal getVarietal() {
-		return Varietal;
+		return varietal;
 	}
 	public void setVarietal(Varietal varietal) {
-		Varietal = varietal;
+		this.varietal = varietal;
 	}
 	public Vineyard getVineyard() {
-		return Vineyard;
+		return vineyard;
 	}
 	public void setVineyard(Vineyard vineyard) {
-		Vineyard = vineyard;
+		this.vineyard = vineyard;
 	}
 	public List<ProductAttribute> getProductAttributes() {
-		return ProductAttributes;
+		return productAttributes;
 	}
 	public void setProductAttributes(List<ProductAttribute> productAttributes) {
-		ProductAttributes = productAttributes;
+		this.productAttributes = productAttributes;
 	}
 	public List<Label> getLabels() {
-		return Labels;
+		return labels;
 	}
 	public void setLabels(List<Label> labels) {
-		Labels = labels;
+		this.labels = labels;
 	}
 	public Ratings getRatings() {
-		return Ratings;
+		return ratings;
 	}
 	public void setRatings(Ratings ratings) {
-		Ratings = ratings;
+		this.ratings = ratings;
 	}
 	public Retail getRetail() {
-		return Retail;
+		return retail;
 	}
 	public void setRetail(Retail retail) {
-		Retail = retail;
+		this.retail = retail;
 	}
 	public Vintages getVintages() {
-		return Vintages;
+		return vintages;
 	}
 	public void setVintages(Vintages vintages) {
-		Vintages = vintages;
+		this.vintages = vintages;
 	}
 	public Community getCommunity() {
-		return Community;
+		return community;
 	}
 	public void setCommunity(Community community) {
-		Community = community;
+		this.community = community;
+	}
+	public Appelation getAppelation() {
+		return appellation;
+	}
+	public void setAppelation(Appelation appelation) {
+		this.appellation = appelation;
+	}
+	public String getVintage() {
+		return vintage;
+	}
+	public void setVintage(String vintage) {
+		this.vintage = vintage;
 	}
 	
 	
 	
-}
+	
+	
+	}

@@ -3,42 +3,49 @@
  */
 package es.instavino.wine.api.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
  */
 public class Retail {
 	
-	private String Sku;
-	private Boolean InStock;
-	private Float Price;
-	private String Url;
+
+	@JsonProperty(value = "Sku")
+	private String sku;
+	@JsonProperty(value = "InStock")
+	private Boolean inStock;
+	@JsonProperty(value = "Price")
+	private Float price;
+	@JsonProperty(value = "Url")
+	private String url;
 	public String getSku() {
-		return Sku;
+		return sku;
 	}
 	public void setSku(String sku) {
-		Sku = sku;
+		this.sku = sku;
 	}
 	public Boolean getInStock() {
-		return InStock;
+		return inStock;
 	}
 	public void setInStock(Boolean inStock) {
-		InStock = inStock;
+		this.inStock = inStock;
 	}
 	public Float getPrice() {
-		return Price;
+		return price;
 	}
 	public void setPrice(Float price) {
-		Price = price;
+		this.price = price;
 	}
 	public String getUrl() {
-		return Url;
+		return url;
 	}
 	public void setUrl(String url) {
-		Url = url;
+		this.url = url;
 	}
 	
 	
-	
+		
 
 }

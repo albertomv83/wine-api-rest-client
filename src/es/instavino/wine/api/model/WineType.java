@@ -3,33 +3,39 @@
  */
 package es.instavino.wine.api.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
  */
 public class WineType {
 	
-	private Long Id;
-	private String Name;
-	private String Url;
+	@JsonProperty(value = "Id")
+	private Long id;
+	@JsonProperty(value = "Name")
+	private String name;
+	@JsonProperty(value = "Url")
+	private String url;
 	public Long getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public String getUrl() {
-		return Url;
+		return url;
 	}
 	public void setUrl(String url) {
-		Url = url;
+		this.url = url;
 	}
+	
 	
 	
 	

@@ -3,6 +3,10 @@
  */
 package es.instavino.wine.api.model;
 
+import java.util.List;
+
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
@@ -10,33 +14,21 @@ package es.instavino.wine.api.model;
 public class Ratings {
 	
 	
-	private Long Id;
-	private String Name;
-	private Long Score;
-	private String Url;
-	public Long getId() {
-		return Id;
+	@JsonProperty(value = "HighestScore")
+	private Long highestScore;
+	@JsonProperty(value = "List")
+	private List<Rating> list;
+	public Long getHighestScore() {
+		return highestScore;
 	}
-	public void setId(Long id) {
-		Id = id;
+	public void setHighestScore(Long highestScore) {
+		this.highestScore = highestScore;
 	}
-	public String getName() {
-		return Name;
+	public List<Rating> getList() {
+		return list;
 	}
-	public void setName(String name) {
-		Name = name;
-	}
-	public Long getScore() {
-		return Score;
-	}
-	public void setScore(Long score) {
-		Score = score;
-	}
-	public String getUrl() {
-		return Url;
-	}
-	public void setUrl(String url) {
-		Url = url;
+	public void setList(List<Rating> list) {
+		this.list = list;
 	}
 	
 	

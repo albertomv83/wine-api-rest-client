@@ -3,26 +3,33 @@
  */
 package es.instavino.wine.api.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
  */
 public class Community {
 	
-	private CommunityReviews Reviews;
-	private String Url;
+	@JsonProperty(value = "Reviews")
+	private CommunityReviews reviews;
+	@JsonProperty(value = "Url")
+	private String url;
+	
 	public CommunityReviews getReviews() {
-		return Reviews;
+		return reviews;
 	}
 	public void setReviews(CommunityReviews reviews) {
-		Reviews = reviews;
+		this.reviews = reviews;
 	}
 	public String getUrl() {
-		return Url;
+		return url;
 	}
 	public void setUrl(String url) {
-		Url = url;
+		this.url = url;
 	}
+	
+	
 	
 	
 

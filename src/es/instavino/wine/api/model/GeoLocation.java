@@ -3,33 +3,39 @@
  */
 package es.instavino.wine.api.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * @author albertomv
  *
  */
 public class GeoLocation {
 	
-	private Integer Latitude;
-	private Integer Longitude;
-	private String URL;
+	@JsonProperty(value = "Latitude")
+	private Integer latitude;
+	@JsonProperty(value = "Longitude")
+	private Integer longitude;
+	@JsonProperty(value = "Url")
+	private String url;
 	public Integer getLatitude() {
-		return Latitude;
+		return latitude;
 	}
 	public void setLatitude(Integer latitude) {
-		Latitude = latitude;
+		this.latitude = latitude;
 	}
 	public Integer getLongitude() {
-		return Longitude;
+		return longitude;
 	}
 	public void setLongitude(Integer longitude) {
-		Longitude = longitude;
+		this.longitude = longitude;
 	}
-	public String getURL() {
-		return URL;
+	public String getUrl() {
+		return url;
 	}
-	public void setURL(String uRL) {
-		URL = uRL;
+	public void setUrl(String url) {
+		this.url = url;
 	}
+	
 	
 	
 

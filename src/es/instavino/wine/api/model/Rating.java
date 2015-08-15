@@ -9,19 +9,19 @@ import org.codehaus.jackson.annotate.JsonProperty;
  * @author albertomv
  *
  */
-public class Label {
-	
+public class Rating {
 	@JsonProperty(value = "Id")
-	private String id;
+	private Long id;
 	@JsonProperty(value = "Name")
 	private String name;
 	@JsonProperty(value = "Url")
 	private String url;
-	
-	public String getId() {
+	@JsonProperty(value = "Score")
+	private Long score;
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -36,8 +36,13 @@ public class Label {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	public Long getScore() {
+		return score;
+	}
+	public void setScore(Long score) {
+		this.score = score;
+	}
 	
 	
 	
-
 }

@@ -48,10 +48,12 @@ public class CatalogRestClient {
 		int total = r.getProducts().getTotal();
 		int offset = 100;
 		//iterate
+		System.out.println("total: "+total);
 		while(offset<=total){
 			response.append("\r\n");
 			populateResponse(objectMapper, urlInitial, response, offset);
 			offset = offset+100;
+			System.out.println("offset: "+offset);
 		}
 		PrintWriter pw = new PrintWriter(f);
 		pw.print(response.toString());
@@ -78,8 +80,8 @@ public class CatalogRestClient {
 
 	public static void main(String... args) throws Exception {
 		CatalogRestClient crc = new CatalogRestClient();
-		crc.getCountry("10039", "fcc576adf5eb1d3a2d6e88b76d8e66a3",
-				"C:\\Users\\albertomv\\Dropbox\\Master\\Proyecto\\francia-rhone.txt");
+		crc.getCountry("101", "fcc576adf5eb1d3a2d6e88b76d8e66a3",
+				"C:\\Users\\albertomv\\Dropbox\\Master\\Proyecto\\california.txt");
 		
 	}
 }

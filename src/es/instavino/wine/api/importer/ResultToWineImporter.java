@@ -31,7 +31,7 @@ public class ResultToWineImporter {
             final String pathToFiles, final String resultFile)
                     throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
-        Pattern year = Pattern.compile("\\d\\d\\d\\d");
+        Pattern year = Pattern.compile("19\\d\\d|20\\d\\d");
         File result = new File(pathToFiles + resultFile);
         result.createNewFile();
         FileWriter fw = new FileWriter(result);
@@ -74,7 +74,7 @@ public class ResultToWineImporter {
                     "francia-bordeaux.txt", "francia-otros.txt",
                     "francia-rhone.txt", "italia.txt", "spain.txt" };
         rtwi.importWinesIntoSingleFile(files,
-            "C:\\Users\\amancheno\\Dropbox\\Master\\Proyecto\\",
+            "C:\\Users\\albertomv\\Dropbox\\Master\\Proyecto\\",
             "allWines.json");
     }
 
